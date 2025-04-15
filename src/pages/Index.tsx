@@ -2,6 +2,8 @@
 import React from "react";
 import Layout from "@/components/Layout";
 import StatCard from "@/components/StatCard";
+import GlobalStatsCard from "@/components/GlobalStatsCard";
+import TotalStepsChart from "@/components/TotalStepsChart";
 import { Button } from "@/components/ui/button";
 import { PlusCircle } from "lucide-react";
 
@@ -64,6 +66,12 @@ const users = [
 ];
 
 const Index = () => {
+  const globalStats = {
+    totalSteps: 2847392,
+    totalUsers: users.length,
+    dailyGoalCompletion: 78
+  };
+
   return (
     <Layout>
       <div className="flex items-center justify-between mb-6">
@@ -77,19 +85,12 @@ const Index = () => {
         </Button>
       </div>
 
-      <div className="mb-8 rounded-xl border border-accent/20 bg-accent/5 p-4">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div>
-            <h2 className="text-xl font-semibold neon-blue-text">Welcome to StrideVerse!</h2>
-            <p className="text-muted-foreground">Track steps, predict performance, earn rewards</p>
-          </div>
-          <Button variant="outline" className="border-accent text-accent hover:bg-accent/20 hover:text-accent">
-            Connect Fitness App
-          </Button>
-        </div>
+      <div className="grid gap-6">
+        <GlobalStatsCard {...globalStats} />
+        <TotalStepsChart />
       </div>
 
-      <h2 className="text-xl font-semibold mb-4">Top Performers</h2>
+      <h2 className="text-xl font-semibold my-6">Active Participants</h2>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {users.map((user) => (
           <StatCard key={user.id} user={user} />
