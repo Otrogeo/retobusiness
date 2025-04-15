@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,15 +53,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+				tron: {
+					blue: '#1EAEDB',
+					orange: '#F97316',
+					violet: '#8B5CF6',
+					magenta: '#D946EF',
+					dark: '#1A1F2C',
+					darker: '#0C0E15',
 				}
 			},
 			borderRadius: {
@@ -70,25 +69,43 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' },
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' },
+				},
+				pulse: {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' },
+				},
+				glow: {
+					'0%, 100%': { 
+						boxShadow: '0 0 5px theme("colors.tron.blue"), 0 0 10px theme("colors.tron.blue")',
+						borderColor: 'theme("colors.tron.blue")'
 					},
-					to: {
-						height: '0'
-					}
-				}
+					'50%': { 
+						boxShadow: '0 0 20px theme("colors.tron.blue"), 0 0 30px theme("colors.tron.blue")',
+						borderColor: 'theme("colors.tron.magenta")'
+					},
+				},
+				countUp: {
+					'0%': { transform: 'translateY(100%)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' },
+				},
+				'progress-fill': {
+					'0%': { 'stroke-dasharray': '0 100' },
+					'100%': { 'stroke-dasharray': 'var(--progress-value) 100' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+				'glow': 'glow 2s ease-in-out infinite',
+				'count-up': 'countUp 0.5s ease-out',
+				'progress-fill': 'progress-fill 1s ease-in-out forwards',
 			}
 		}
 	},
