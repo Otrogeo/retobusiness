@@ -59,7 +59,10 @@ const LeaderboardTable = ({ users, className }: LeaderboardTableProps) => {
               <TableCell className="font-medium">{user.name}</TableCell>
               <TableCell className="text-right">{user.steps.toLocaleString()}</TableCell>
               <TableCell className="text-right">
-                <Badge variant={user.progress >= 100 ? "default" : "default"} className={user.progress >= 100 ? "bg-green-500/20 text-green-500 hover:bg-green-500/30" : ""}>
+                <Badge 
+                  variant={user.progress >= 100 ? "default" : "outline"} 
+                  className={user.progress >= 100 ? "bg-green-500/20 text-green-500 hover:bg-green-500/30" : ""}
+                >
                   {user.progress}%
                 </Badge>
               </TableCell>
