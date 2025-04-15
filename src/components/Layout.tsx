@@ -45,7 +45,7 @@ const Layout = ({ children }: LayoutProps) => {
           <div className="flex items-center gap-2">
             <Link to="/" className="flex items-center gap-2">
               <div className="h-6 w-6 rounded-full bg-primary animate-pulse"></div>
-              <span className="text-lg font-bold neon-orange-text">StrideVerse</span>
+              <span className="text-lg font-bold neon-orange-text">FITtoken Business</span>
             </Link>
           </div>
           <div className="flex items-center gap-2">
