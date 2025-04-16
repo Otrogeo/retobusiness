@@ -1,11 +1,8 @@
-
 import React from "react";
 import Layout from "@/components/Layout";
 import StatCard from "@/components/StatCard";
 import GlobalStatsCard from "@/components/GlobalStatsCard";
 import TotalStepsChart from "@/components/TotalStepsChart";
-import { Button } from "@/components/ui/button";
-import { PlusCircle } from "lucide-react";
 
 // Mock data for demonstration
 const users = [
@@ -79,10 +76,6 @@ const Index = () => {
           <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
           <p className="text-muted-foreground">Monitor fitness states and place predictions</p>
         </div>
-        <Button>
-          <PlusCircle className="mr-2 h-4 w-4" />
-          New Prediction
-        </Button>
       </div>
 
       <div className="grid gap-6">
