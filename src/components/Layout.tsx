@@ -44,7 +44,11 @@ const Layout = ({ children }: LayoutProps) => {
         <div className="container flex h-14 items-center justify-between">
           <div className="flex items-center gap-2">
             <Link to="/" className="flex items-center gap-2">
-              <div className="h-6 w-6 rounded-full bg-primary animate-pulse"></div>
+              <img 
+                src="/lovable-uploads/d3cfed66-a858-4e92-88ae-d9db1ae2a75d.png" 
+                alt="FITtoken Business Logo" 
+                className="h-8 w-8 object-contain"
+              />
               <span className="text-lg font-bold neon-orange-text">FITtoken Business</span>
             </Link>
           </div>
