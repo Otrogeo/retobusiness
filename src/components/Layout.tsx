@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Wallet, LineChart, Users, Home, Trophy } from "lucide-react";
@@ -45,10 +46,15 @@ const Layout = ({ children }: LayoutProps) => {
             <Link to="/" className="flex items-center gap-2">
               <img 
                 src="/lovable-uploads/d3cfed66-a858-4e92-88ae-d9db1ae2a75d.png" 
-                alt="FITtoken Business Logo" 
+                alt="Reto Business Logo" 
                 className="h-8 w-32 object-contain"
               />
-              <span className="text-lg font-bold neon-orange-text">FITtoken Business</span>
+              <span 
+                className="text-lg font-bold" 
+                style={{ color: '#04e3f1' }}
+              >
+                Reto Business
+              </span>
             </Link>
           </div>
           <div className="flex items-center gap-2">
