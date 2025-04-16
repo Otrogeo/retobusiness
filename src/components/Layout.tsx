@@ -33,7 +33,6 @@ const Layout = ({ children }: LayoutProps) => {
   const [isWalletConnected, setIsWalletConnected] = React.useState(false);
 
   const connectWallet = () => {
-    // Mock wallet connection
     setIsWalletConnected(true);
     toast.success("Wallet connected successfully");
   };
@@ -57,7 +56,35 @@ const Layout = ({ children }: LayoutProps) => {
               </span>
             </Link>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-4">
+            <a 
+              href="#" 
+              className="h-10 transition-transform hover:scale-105"
+              onClick={(e) => {
+                e.preventDefault();
+                toast.info("App Store download coming soon!");
+              }}
+            >
+              <img
+                src="/lovable-uploads/b743fa20-1b22-4f95-a165-9029ada38843.png"
+                alt="Download on App Store"
+                className="h-10"
+              />
+            </a>
+            <a 
+              href="#" 
+              className="h-10 transition-transform hover:scale-105"
+              onClick={(e) => {
+                e.preventDefault();
+                toast.info("Google Play download coming soon!");
+              }}
+            >
+              <img
+                src="/lovable-uploads/f908139f-0bcc-44b8-841c-a17421a75b11.png"
+                alt="Get it on Google Play"
+                className="h-10"
+              />
+            </a>
             {isWalletConnected ? (
               <Button variant="outline" className="border border-tron-blue animate-glow">
                 <Wallet className="mr-2 h-4 w-4" />
