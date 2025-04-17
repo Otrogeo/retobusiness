@@ -1,6 +1,7 @@
+
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Wallet } from "lucide-react";
+import { Wallet, Home, LineChart, Trophy, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
